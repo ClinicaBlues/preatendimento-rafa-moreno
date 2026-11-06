@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E1722">
+<meta name="robots" content="noindex,nofollow">
+<title>Pré-consulta · Dr. Rafael Moreno</title>
+<meta name="description" content="Pré-consulta online do Dr. Rafael Moreno, ortopedista e traumatologista da Clínica Blues.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="config.js"></script>
+<style>
+:root{
+  --ink:#0E1722; --graf:#4A5160; --mut:#8B8F99; --bronze:#967848; --bronze-d:#7A5F37;
+  --tan:#B89968; --sand:#EADCC3; --sand-w:#F6F1E8; --paper:#FFFDF8; --line:#E8E1D2; --line2:#F0EADD;
+  --red:#A63A2B; --red-w:#FBEFEC;
+  --r:16px; --shadow:0 1px 2px rgba(24,24,24,.04),0 10px 30px rgba(24,24,24,.06);
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:var(--paper);color:var(--ink);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%;overflow-x:hidden}
+.serif{font-family:'Cormorant Garamond',Georgia,serif}
+
+/* ---------- topo ---------- */
+header{position:sticky;top:0;z-index:20;background:rgba(252,250,247,.94);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line2)}
+.hbar{max-width:680px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:12px}
+.avatar{width:42px;height:42px;border-radius:50%;flex:none;background:var(--ink) center/cover no-repeat;border:2px solid #fff;box-shadow:0 0 0 1.5px var(--tan);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;color:var(--tan);font-size:16px}
+.who{line-height:1.15;min-width:0}
+.who b{font-family:'Cormorant Garamond',Georgia,serif;font-weight:700;font-size:19px;display:block;white-space:nowrap}
+.who small{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--bronze);font-weight:600}
+.spacer{flex:1}
+.saved{font-size:11px;color:var(--bronze-d);background:var(--sand-w);border:1px solid var(--line);padding:4px 10px;border-radius:99px;opacity:0;transition:opacity .3s;white-space:nowrap}
+.saved.on{opacity:1}
+.progress{height:3px;background:var(--line2)}
+.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--tan),var(--bronze));transition:width .35s cubic-bezier(.4,0,.2,1)}
+
+main{max-width:680px;margin:0 auto;padding:22px 16px 130px;position:relative}
+.step-k{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze);font-weight:700}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(32px,8.4vw,46px);line-height:1.12;letter-spacing:-.01em}
+h1 em,h2 em{font-style:italic;color:var(--bronze);font-weight:500}
+h2{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(26px,6.6vw,33px);line-height:1.2;margin:6px 0 6px}
+.lead{color:var(--graf);font-size:15px;line-height:1.6}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px 18px;box-shadow:var(--shadow);margin-top:16px}
+.anim{animation:in .32s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ---------- boas-vindas ---------- */
+.hero{display:grid;grid-template-columns:1fr;gap:6px;align-items:end}
+.hero-img{position:relative;height:340px;margin:0 -16px;overflow:hidden;background:var(--ink)}
+.hero-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.hero-img .fade{position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(transparent,var(--paper));z-index:2}
+.hero-img .badge{position:absolute;left:16px;top:16px;z-index:3;background:rgba(14,23,34,.72);color:#F6F1E8;font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;padding:7px 11px;font-weight:600}
+.facts{display:grid;gap:10px;margin:18px 0 4px}
+.fact{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;color:var(--graf)}
+.fact i{flex:none;width:30px;height:30px;border-radius:50%;background:var(--tan);color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700;font-size:13px}
+.fact b{color:var(--ink);font-weight:600}
+.privacy-note{font-size:12.5px;color:var(--mut);margin-top:14px;line-height:1.5}
+
+/* ---------- perguntas ---------- */
+.q{margin-top:22px}
+.q:first-child{margin-top:4px}
+.q>.lbl{display:block;font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:8px;line-height:1.38}
+.q .req{color:var(--bronze)}
+.q .hint{font-size:13px;color:var(--mut);margin:-4px 0 9px;line-height:1.45}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+.row2 .q,.row3 .q{margin-top:22px}
+input[type=text],input[type=tel],input[type=email],input[type=date],input[type=number],textarea{width:100%;font:inherit;font-size:16px;padding:12px 13px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink);transition:border-color .2s,box-shadow .2s}
+textarea{min-height:96px;resize:vertical;line-height:1.5}
+input:focus,textarea:focus{outline:none;border-color:var(--bronze);box-shadow:0 0 0 3px rgba(150,120,72,.16)}
+input::placeholder,textarea::placeholder{color:#B5AEA6}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:99px;padding:10px 15px;font-size:14.5px;cursor:pointer;user-select:none;color:var(--ink);line-height:1.25;transition:all .15s}
+.chip:hover{border-color:var(--tan)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.scale{display:grid;grid-template-columns:repeat(11,1fr);gap:4px}
+.scale .chip{padding:10px 0;text-align:center;border-radius:9px;font-weight:700;font-size:14px}
+.scale-l{display:flex;justify-content:space-between;font-size:11.5px;color:var(--mut);margin-top:5px}
+.big{display:grid;gap:9px}
+.big .opt{border:1.5px solid var(--line);background:#fff;border-radius:14px;padding:14px 15px;cursor:pointer;transition:all .15s}
+.big .opt b{display:block;font-size:15.5px;font-weight:700}
+.big .opt span{display:block;font-size:13.5px;color:var(--graf);margin-top:2px;line-height:1.45}
+.big .opt.on{border-color:var(--bronze);background:var(--sand-w);box-shadow:inset 4px 0 0 var(--bronze)}
+.lik{border-top:1px solid var(--line2);padding:14px 0 4px}
+.lik:first-of-type{border-top:0;padding-top:4px}
+.lik .t{font-size:14.5px;font-weight:600;margin-bottom:8px}
+.lik .chips .chip{font-size:13.5px;padding:8px 12px}
+.intro{background:var(--sand-w);border-left:3px solid var(--bronze);padding:11px 13px;border-radius:8px;font-size:13.5px;color:var(--graf);margin:2px 0 6px;line-height:1.5}
+.consent{display:flex;gap:11px;align-items:flex-start;font-size:13.5px;line-height:1.5;color:var(--graf);cursor:pointer}
+.consent input{width:22px;height:22px;flex:none;margin-top:1px;accent-color:var(--bronze)}
+.err{color:var(--red);font-size:13.5px;margin-top:14px;display:none;font-weight:600}
+.q.miss>.lbl{color:var(--red)}
+.q.miss input,.q.miss textarea{border-color:var(--red)}
+
+/* ---------- navegação ---------- */
+nav{position:fixed;left:0;right:0;bottom:0;z-index:20;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+nav .in{max-width:680px;margin:0 auto;display:flex;gap:10px}
+button{font:inherit;font-size:16px;font-weight:700;border-radius:13px;padding:15px 18px;border:0;cursor:pointer;transition:transform .1s,opacity .2s}
+button:active{transform:scale(.98)}
+.b1{flex:1;background:var(--ink);color:#fff;letter-spacing:.01em}
+.b1 .arr{color:var(--tan);margin-left:6px}
+.b2{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+button:disabled{opacity:.55}
+
+/* ---------- conclusão ---------- */
+.done{text-align:center;padding:12px 4px}
+.done .seal{width:84px;height:84px;margin:6px auto 14px;border-radius:50%;background:var(--sand-w);border:1px solid var(--tan);display:flex;align-items:center;justify-content:center}
+.done .seal svg{width:38px;color:var(--bronze)}
+.next{text-align:left;margin-top:18px;display:grid;gap:10px}
+.next div{display:flex;gap:10px;font-size:14.5px;color:var(--graf)}
+.next div::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;background:var(--bronze);margin-top:8px}
+.foot{font-size:11.5px;color:var(--mut);text-align:center;margin-top:22px;line-height:1.6}
+.foot a{color:var(--bronze-d)}
+.testmode{background:#FFF7E0;border:1px dashed #D9B44A;color:#7A5C00;font-size:12px;padding:8px 10px;border-radius:8px;margin-top:14px;text-align:center}
+@media (max-width:420px){.row3{grid-template-columns:1fr 1fr}.row3 .q:last-child{grid-column:span 2}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hbar">
+    <div class="avatar" id="avatar">RM</div>
+    <div class="who"><b id="hName">Dr. Rafael Moreno</b><small id="hSub">Pré-consulta</small></div>
+    <div class="spacer"></div>
+    <div class="saved" id="saved">Salvo neste aparelho</div>
+  </div>
+  <div class="progress"><i id="prog"></i></div>
+</header>
+
+<main><div id="app"></div></main>
+<nav id="nav"><div class="in"><button class="b2" id="bBack" type="button">Voltar</button><button class="b1" id="bNext" type="button">Continuar</button></div></nav>
+
+<script>
+(function(){
+'use strict';
+var CFG = window.PRE_CONFIG || {};
+var KEY = 'rafael-pre-v1';
+var params = new URLSearchParams(location.search);
+var S = load() || { step: -1, a: {} };
+if (params.get('origem')) S.a._origem = params.get('origem');
+
+function load(){ try { return JSON.parse(localStorage.getItem(KEY)); } catch(e){ return null; } }
+var savedT;
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); var p=document.getElementById('saved'); p.classList.add('on'); clearTimeout(savedT); savedT=setTimeout(function(){p.classList.remove('on');},1200);} catch(e){} }
+function clear(){ try { localStorage.removeItem(KEY); } catch(e){} }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
+function has(arr, v){ return Array.isArray(arr) && arr.indexOf(v) > -1; }
+function idade(n){ if(!n) return ''; var d=new Date(n+'T12:00:00'), h=new Date(), a=h.getFullYear()-d.getFullYear(); if(h.getMonth()<d.getMonth()||(h.getMonth()===d.getMonth()&&h.getDate()<d.getDate())) a--; return isNaN(a)||a<0||a>120?'':a; }
+
+/* ---------- cabeçalho com a marca ---------- */
+(function(){
+  var av = document.getElementById('avatar');
+  if (CFG.photoRound) { var im = new Image(); im.onload=function(){ av.style.backgroundImage='url("'+CFG.photoRound+'")'; av.textContent=''; }; im.src = CFG.photoRound; }
+  if (CFG.doctorName) document.getElementById('hName').textContent = CFG.doctorName;
+})();
+
+/* =====================================================================
+   PERGUNTAS
+   ===================================================================== */
+var NAO_SEI = 'Ainda não sei';
+var NADA = /^(Nenhum|Nenhuma|Nada|Ninguém|Ninguém além de mim|Nunca tratei|Nenhum destes|Nenhum exame)$/;
+var CIRURG_SIM = 'Sim, já me indicaram cirurgia';
+var LOC_COLUNA = /Coluna/;
+
+var IMPACTO = [
+  ['i_andar','Caminhar e se locomover'],
+  ['i_sono','Dormir'],
+  ['i_trab','Trabalho e tarefas de casa'],
+  ['i_ativ','Atividade física e lazer'],
+  ['i_humor','Humor e paciência'],
+  ['i_social','Vida social e com a família']
+];
+var IMP_O = ['Nada','Pouco','Moderado','Bastante','Muito'];
+var PHQ_O = ['Nenhuma vez','Vários dias','Mais da metade dos dias','Quase todos os dias'];
+var ALERTA_O = ['Febre ou calafrios junto com a dor','Perda de peso sem explicação','Fraqueza ou dormência que está piorando','Perda de controle da urina ou das fezes','Dor forte que não alivia nem em repouso nem à noite','Queda ou pancada forte recente','Nenhum destes'];
+
+function STEPS(){ var a = S.a; return [
+ { k:'Você', t:'Vamos começar por <em>você</em>', lead:'Seus dados para o Dr. Rafael e a equipe te identificarem.', q:[
+   {id:'nome', t:'Nome completo', type:'text', req:1, ac:'name'},
+   {row:'2', q:[ {id:'nasc', t:'Data de nascimento', type:'dob', req:1, ph:'dd/mm/aaaa'}, {id:'sexo', t:'Sexo', type:'one', o:['Feminino','Masculino'], req:1} ]},
+   {row:'2', q:[ {id:'whats', t:'WhatsApp', type:'tel', req:1, ph:'(31) 9 0000-0000', ac:'tel'}, {id:'email', t:'E-mail', type:'email', ac:'email'} ]},
+   {id:'cidade', t:'Cidade onde mora', type:'text', ph:'Ex.: Belo Horizonte'},
+   {id:'modal', t:'Onde prefere ser atendido(a)?', type:'one', o:['Belo Horizonte (Clínica Blues)','Santa Luzia','Juiz de Fora','Itaúna',NAO_SEI]},
+   {id:'profissao', t:'Profissão ou ocupação', type:'text', ph:'Ex.: Professora, motorista, aposentado…'},
+   {id:'origem', t:'Como você chegou até o Dr. Rafael?', type:'one', o:['Instagram','Indicação de paciente','Indicação de médico ou profissional','Google','Site','Outro']}
+ ]},
+ { k:'Sua dor', t:'Onde e como é a sua <em>dor</em>', lead:'Esta é a parte mais importante. Escreva com as suas palavras: não existe resposta errada.', q:[
+   {id:'locais', t:'Onde dói?', hint:'Pode marcar mais de um.', type:'multi', req:1, o:['Joelho','Quadril','Ombro','Coluna lombar (parte baixa das costas)','Coluna cervical (pescoço)','Mão ou punho','Cotovelo','Tornozelo ou pé','Dor espalhada pelo corpo','Outro']},
+   {id:'lado', t:'De que lado?', type:'one', o:['Direito','Esquerdo','Dos dois lados','Não se aplica']},
+   {id:'queixa', t:'Com as suas palavras, conte sobre essa dor', type:'area', req:1, ph:'Ex.: Dor no joelho direito há 2 anos, piora ao subir escada e depois de caminhar. Já fiz fisioterapia e melhorou pouco…'},
+   {id:'tempo', t:'Há quanto tempo você sente essa dor?', type:'one', req:1, o:['Menos de 1 mês','1 a 3 meses','3 meses a 1 ano','1 a 5 anos','Mais de 5 anos']},
+   {id:'inicio', t:'Como ela começou?', type:'one', o:['Depois de uma queda ou pancada','Depois de esforço ou esporte','Depois de uma cirurgia','Foi aparecendo aos poucos, sem causa clara','Não sei dizer']},
+   {id:'tipo', t:'Como você descreveria essa dor?', hint:'Pode marcar mais de um.', type:'multi', o:['Pontada','Peso ou cansaço','Queimação','Latejante','Choque ou formigamento','Rigidez ao acordar','Estalos ou travamento','Inchaço']},
+   {show:function(){ return LOC_COLUNA.test((a.locais||[]).join('|')); }, id:'irradia', t:'A dor desce para braço ou perna?', type:'one', o:['Não','Sim, para o braço','Sim, para a perna','Às vezes']},
+   {id:'piora', t:'O que piora a dor?', hint:'Pode marcar mais de um.', type:'multi', o:['Caminhar','Subir ou descer escada','Ficar muito tempo sentado(a)','Ficar muito tempo em pé','Agachar','Levantar peso','Movimentar o braço acima da cabeça','Ao acordar','À noite','Frio']},
+   {id:'melhora', t:'O que alivia?', type:'text', ph:'Ex.: Repouso, gelo, remédio… ou "nada alivia"'}
+ ]},
+ { k:'Intensidade', t:'Quanto essa dor <em>pesa</em> hoje', intro:'Respostas rápidas. Elas mostram ao Dr. Rafael a intensidade real da sua dor e servem de ponto de partida para medir a sua evolução no tratamento.', q:[
+   {id:'dorAgora', t:'De 0 a 10, qual a sua dor agora?', type:'scale', req:1, l:['sem dor','pior dor imaginável']},
+   {id:'dorPior', t:'E a pior dor da última semana?', type:'scale', req:1, l:['sem dor','pior dor imaginável']},
+   {lik:IMPACTO, t:'Na última semana, quanto a dor atrapalhou…', o:IMP_O, req:1},
+   {lik:[['phq1','Pouco interesse ou pouco prazer em fazer as coisas'],['phq2','Se sentiu para baixo, desanimado(a) ou sem perspectiva']], t:'Nas últimas 2 semanas, com que frequência você…', o:PHQ_O, req:1},
+   {id:'alerta', t:'Você tem sentido algum destes?', hint:'Marque com atenção. Se tiver algum, a equipe vai priorizar o seu contato.', type:'multi', req:1, o:ALERTA_O}
+ ]},
+ { k:'O que já fez', t:'O que você já <em>tentou</em>', lead:'Saber o que já foi feito evita repetir o que não funcionou e ajuda a escolher o próximo passo.', q:[
+   {id:'tratou', t:'Para essa dor, você já fez…', hint:'Pode marcar mais de um.', type:'multi', o:['Analgésico ou anti-inflamatório','Fisioterapia','Infiltração','Acupuntura','Academia ou pilates orientados','Remédio controlado para dor','Cannabis medicinal','Cirurgia','Nunca tratei']},
+   {show:function(){ return (a.tratou||[]).length && !has(a.tratou,'Nunca tratei'); }, id:'tratouComo', t:'Como foi? O que ajudou e o que não ajudou?', type:'text', ph:'Ex.: Fisioterapia ajudou por 2 meses; infiltração não fez efeito'},
+   {id:'exames', t:'Tem exames de imagem dessa região?', hint:'Pode marcar mais de um.', type:'multi', o:['Raio-X','Ressonância','Ultrassom','Tomografia','Nenhum exame']},
+   {id:'cirurgiaInd', t:'Algum médico já indicou cirurgia para essa dor?', type:'one', req:1, o:[CIRURG_SIM,'Não','Já discutiram, mas não indicaram']},
+   {show:function(){ return a.cirurgiaInd===CIRURG_SIM; }, id:'cirurgiaQual', t:'Qual cirurgia, e o que você pensa sobre ela?', type:'text', ph:'Ex.: Prótese de joelho. Quero saber se existe alternativa antes'},
+   {id:'expect', t:'O que você espera desta consulta?', hint:'Pode marcar mais de um.', type:'multi', req:1, o:['Entender a causa da minha dor','Aliviar a dor o quanto antes','Evitar ou adiar uma cirurgia','Conhecer tratamentos regenerativos','Infiltração guiada por ultrassom','Um plano com fisioterapia e reabilitação','Emagrecer para aliviar as articulações','Avaliar cannabis medicinal','Avaliação para cirurgia','Uma segunda opinião']}
+ ]},
+ { k:'O que está em jogo', t:'Onde você quer <em>chegar</em>', lead:'Estas perguntas não são sobre sintomas, são sobre a sua vida. Elas ajudam o Dr. Rafael a montar um caminho do tamanho do que você precisa.', q:[
+   {id:'deixouDeFazer', t:'O que a dor te impede de fazer hoje?', type:'area', req:1, ph:'Ex.: Caminhar com meu cachorro, jogar bola com meu neto, trabalhar o dia inteiro em pé…'},
+   {id:'afetados', t:'Além de você, quem mais sente os efeitos dessa dor?', type:'multi', o:['Cônjuge ou companheiro(a)','Filhos ou netos','Pais','Trabalho ou equipe','Amigos e vida social','Ninguém além de mim']},
+   {id:'seisMeses', t:'Daqui a 6 meses, como você quer estar?', hint:'Imagine que deu certo. O que você voltou a fazer?', type:'area', req:1, ph:'Ex.: Caminhando sem dor, dormindo a noite inteira e de volta à academia…'},
+   {id:'prontidao', t:'De 0 a 10, o quanto você se sente pronto(a) para começar um tratamento agora?', type:'scale', req:1, l:['ainda não','quero começar já']},
+   {id:'conducao', t:'Depois da consulta, como você prefere ser conduzido(a)?', type:'big', req:1, o:[
+     ['Uma avaliação e orientação','Quero entender o meu caso e sair com as orientações principais.'],
+     ['Um tratamento direcionado','Quero tratar a dor com acompanhamento médico próximo, com procedimentos e reavaliações.'],
+     ['Um programa completo','Quero o tratamento médico junto com a equipe multidisciplinar da Clínica Blues (fisioterapia, nutrição e acompanhamento) para ter o melhor resultado.'],
+     [NAO_SEI,'Prefiro ouvir o Dr. Rafael e decidir na consulta.'] ]},
+   {id:'decide', t:'Quem decide sobre o seu tratamento junto com você?', type:'one', req:1, o:['Só eu','Eu e meu cônjuge','Eu e minha família','Outra pessoa']},
+   {id:'decidePresente', show:function(){ return a.decide && a.decide!=='Só eu'; }, t:'Essa pessoa vai estar com você na consulta?', type:'one', o:['Sim','Não','Por vídeo ou telefone']}
+ ]},
+ { k:'Para finalizar', t:'Sua <em>saúde</em> em geral', lead:'Quase lá. Se não souber algum item, deixe em branco e traga na consulta.', q:[
+   {id:'doencas', t:'Você tem ou já teve algum destes?', type:'multi', o:['Pressão alta','Diabetes ou pré-diabetes','Osteoporose','Artrite reumatoide ou outra doença autoimune','Gota','Problema nos rins','Gastrite ou úlcera','Ansiedade ou depressão','Câncer','Nenhum']},
+   {id:'anticoag', t:'Usa remédio que "afina o sangue"?', hint:'Ex.: AAS, clopidogrel, varfarina, rivaroxabana, apixabana.', type:'one', o:['Não','Sim','Não sei']},
+   {id:'remedios', t:'Remédios que usa hoje (inclusive para dor)', hint:'Nome e dose, se souber.', type:'area', ph:'Ex.: Losartana 50 mg; dipirona quando dói…'},
+   {id:'alergias', t:'Alergias', type:'text', ph:'Remédios, contraste, alimentos… ou "nenhuma"'},
+   {row:'2', q:[ {id:'peso', t:'Peso (kg)', type:'number', ph:'Ex.: 82'}, {id:'altura', t:'Altura (cm)', type:'number', ph:'Ex.: 170'} ]},
+   {show:function(){ return a.sexo==='Feminino' && !(idade(a.nasc) > 55); }, id:'gest', t:'Está grávida, amamentando ou planejando engravidar?', type:'one', o:['Não','Grávida','Amamentando','Planejando engravidar']},
+   {row:'2', q:[ {id:'ativ', t:'Atividade física', type:'one', o:['Não pratico','1 a 2x por semana','3x ou mais']}, {id:'fumo', t:'Fuma?', type:'one', o:['Não','Sim','Parei']} ]},
+   {id:'obs', t:'Algo mais que o Dr. Rafael precisa saber?', type:'area', ph:'Opcional'},
+   {id:'lgpd', type:'consent', req:1}
+ ]}
+]; }
+
+/* =====================================================================
+   RENDER
+   ===================================================================== */
+var app=document.getElementById('app'), bN=document.getElementById('bNext'), bB=document.getElementById('bBack'), nav=document.getElementById('nav'), prog=document.getElementById('prog');
+
+function visible(q){ return !q.show || q.show(); }
+function flat(st){ var out=[]; st.q.forEach(function(q){ if(!visible(q)) return; if(q.row) q.q.forEach(function(x){ out.push(x); }); else out.push(q); }); return out; }
+
+function welcome(){
+  nav.style.display='none'; prog.style.width='0';
+  document.getElementById('hSub').textContent = CFG.crm || 'Pré-consulta';
+  var h = '<div class="anim">';
+  if (CFG.photoHero) h += '<div class="hero-img"><img src="'+esc(CFG.photoHero)+'" alt="'+esc(CFG.doctorName)+'" onerror="this.parentNode.style.display=\'none\'"><span class="badge">Ortopedia &amp; Traumatologia</span><div class="fade"></div></div>';
+  h += '<div class="step-k" style="margin-top:6px">Pré-consulta</div>';
+  h += '<h1>A dor é o sintoma. <em>Vamos entender o que está por trás dela.</em></h1>';
+  h += '<p class="lead" style="margin-top:12px">Olá! Aqui é o '+esc(CFG.doctorShort||'Dr. Rafael')+'. Antes do nosso encontro, quero conhecer a sua dor, o que você já tentou e onde quer chegar. Assim a consulta rende muito mais para você.</p>';
+  h += '<div class="facts"><div class="fact"><i>6</i><div><b>Cerca de 6 minutos</b>, em 6 etapas curtas, pelo celular.</div></div>' +
+       '<div class="fact"><i>✓</i><div><b>Só o '+esc(CFG.doctorShort||'Dr. Rafael')+' e a equipe dele recebem</b> as suas respostas.</div></div>' +
+       '<div class="fact"><i>↺</i><div><b>Pode parar e voltar depois.</b> O que você preencher fica salvo neste aparelho até enviar.</div></div></div>';
+  h += '<button class="b1" id="bStart" style="width:100%;margin-top:22px">'+(Object.keys(S.a).filter(function(k){return k[0]!=='_';}).length?'Continuar de onde parei':'Começar')+' <span class="arr">→</span></button>';
+  h += foot() + '</div>';
+  app.innerHTML = h;
+  document.getElementById('bStart').onclick = function(){ S.step = S.step>=0 ? S.step : 0; if (S.step<0) S.step=0; save(); render(); };
+  window.scrollTo(0,0);
+}
+function foot(){
+  var t = '<p class="foot">'+esc(CFG.doctorName||'')+(CFG.crm?' · '+esc(CFG.crm):'')+'<br>'+esc(CFG.address||'')+'<br>'+esc(CFG.online||'');
+  if (CFG.supportWhatsapp) t += '<br>Dúvidas? <a href="https://wa.me/'+esc(CFG.supportWhatsapp)+'" target="_blank" rel="noopener">Fale com a clínica</a>';
+  t += '</p>';
+  if (!CFG.endpointUrl && !CFG.whatsappEnvio) t += '<div class="testmode">Modo de teste: as respostas não são enviadas (falta a URL do robô em config.js).</div>';
+  return t;
+}
+
+function render(){
+  if (S.step < 0) return welcome();
+  var ST = STEPS(); if (S.step >= ST.length) S.step = ST.length-1;
+  var st = ST[S.step];
+  nav.style.display='';
+  document.getElementById('hSub').textContent = 'Pré-consulta · ' + (S.step+1) + ' de ' + ST.length;
+  prog.style.width = Math.round((S.step+1)/(ST.length+1)*100)+'%';
+  var h = '<div class="anim"><div class="step-k">'+(S.step+1)+' de '+ST.length+' · '+esc(st.k)+'</div><h2>'+st.t+'</h2>';
+  if (st.lead) h += '<p class="lead">'+esc(st.lead)+'</p>';
+  h += '<div class="card">';
+  if (st.intro) h += '<div class="intro">'+esc(st.intro)+'</div>';
+  st.q.forEach(function(q){
+    if (!visible(q)) return;
+    if (q.row) { h += '<div class="row'+q.row+'">'+q.q.map(qHtml).join('')+'</div>'; return; }
+    h += qHtml(q);
+  });
+  h += '<div class="err" id="err">Responda os itens marcados para continuar.</div></div>' + foot() + '</div>';
+  app.innerHTML = h;
+  bind();
+  bB.style.visibility = 'visible';
+  bN.innerHTML = S.step === ST.length-1 ? (CFG.endpointUrl ? 'Enviar para o '+esc(CFG.doctorShort||'Dr. Rafael')+' <span class="arr">✓</span>' : 'Enviar pelo WhatsApp <span class="arr">✓</span>') : 'Continuar <span class="arr">→</span>';
+  bN.disabled = false;
+  window.scrollTo(0,0);
+}
+
+function lbl(q){ return '<span class="lbl">'+esc(q.t)+(q.req?' <span class="req">*</span>':'')+'</span>' + (q.hint?'<div class="hint">'+esc(q.hint)+'</div>':''); }
+function qHtml(q){
+  var v = S.a[q.id], h;
+  if (q.lik) {
+    h = '<div class="q" data-lik="1"><span class="lbl">'+esc(q.t)+(q.req?' <span class="req">*</span>':'')+'</span>';
+    q.lik.forEach(function(l){ h += '<div class="lik" data-id="'+l[0]+'"><div class="t">'+esc(l[1])+'</div><div class="chips">'+q.o.map(function(o,i){ return '<span class="chip'+(S.a[l[0]]===i?' on':'')+'" data-v="'+i+'">'+esc(o)+'</span>'; }).join('')+'</div></div>'; });
+    return h + '</div>';
+  }
+  h = '<div class="q" data-q="'+q.id+'">';
+  if (q.type !== 'consent') h += lbl(q);
+  var ph = q.ph ? ' placeholder="'+esc(q.ph)+'"' : '', ac = q.ac ? ' autocomplete="'+q.ac+'"' : '';
+  if (/^(text|tel|email|date|number)$/.test(q.type)) h += '<input type="'+q.type+'" data-in="'+q.id+'" value="'+esc(v||'')+'"'+ph+ac+(q.type==='number'?' inputmode="decimal"':'')+(q.type==='tel'?' inputmode="tel"':'')+'>';
+  else if (q.type==='dob') h += '<input type="text" data-dob="'+q.id+'" inputmode="numeric" autocomplete="bday" maxlength="10" placeholder="dd/mm/aaaa" value="'+esc(S.a[q.id+'Txt'] || (v ? v.split('-').reverse().join('/') : ''))+'">';
+  else if (q.type==='area') h += '<textarea data-in="'+q.id+'"'+ph+'>'+esc(v||'')+'</textarea>';
+  else if (q.type==='one') h += '<div class="chips">'+q.o.map(function(o){ return '<span class="chip'+(v===o?' on':'')+'" data-one="'+q.id+'" data-v="'+esc(o)+'">'+esc(o)+'</span>'; }).join('')+'</div>';
+  else if (q.type==='multi') h += '<div class="chips">'+q.o.map(function(o){ return '<span class="chip'+(has(v,o)?' on':'')+'" data-multi="'+q.id+'" data-v="'+esc(o)+'">'+esc(o)+'</span>'; }).join('')+'</div>';
+  else if (q.type==='big') h += '<div class="big">'+q.o.map(function(o){ return '<div class="opt'+(v===o[0]?' on':'')+'" data-one="'+q.id+'" data-v="'+esc(o[0])+'"><b>'+esc(o[0])+'</b><span>'+esc(o[1])+'</span></div>'; }).join('')+'</div>';
+  else if (q.type==='scale') { h += '<div class="scale">'; for (var i=0;i<=10;i++) h += '<span class="chip'+(v===i?' on':'')+'" data-scale="'+q.id+'" data-v="'+i+'">'+i+'</span>'; h += '</div><div class="scale-l"><span>'+esc(q.l[0])+'</span><span>'+esc(q.l[1])+'</span></div>'; }
+  else if (q.type==='consent') h += '<label class="consent"><input type="checkbox" data-ck="'+q.id+'"'+(v?' checked':'')+'><span>Autorizo o '+esc(CFG.doctorName||'médico')+' e a equipe da Clínica Blues a usar estas informações para o meu atendimento e a entrar em contato comigo.'+(CFG.endpointUrl?'':' Ao enviar, o resumo das respostas abre no meu WhatsApp para eu mandar à clínica.')+' Os dados ficam protegidos conforme a LGPD e posso pedir a exclusão a qualquer momento.'+(CFG.privacyUrl?' <a href="'+esc(CFG.privacyUrl)+'" target="_blank" rel="noopener">Política de privacidade</a>.':'')+' <span class="req">*</span></span></label>';
+  return h + '</div>';
+}
+
+var REFLOW = { locais:1, sexo:1, tratou:1, afetados:1, decide:1, cirurgiaInd:1 };
+function changed(id){ save(); if (REFLOW[id]) { var y = window.scrollY; var focusId = document.activeElement && document.activeElement.dataset ? document.activeElement.dataset.in : null; render(); window.scrollTo(0,y); if (focusId) { var f = app.querySelector('[data-in="'+focusId+'"]'); if (f) { f.focus(); } } } }
+
+function bind(){
+  app.querySelectorAll('[data-in]').forEach(function(el){
+    el.oninput=function(){ S.a[el.dataset.in]=el.value; save(); el.closest('.q').classList.remove('miss'); };
+  });
+  app.querySelectorAll('[data-dob]').forEach(function(el){ el.oninput=function(){
+    var d=el.value.replace(/\D/g,'').slice(0,8), f=d;
+    if (d.length>4) f=d.slice(0,2)+'/'+d.slice(2,4)+'/'+d.slice(4); else if (d.length>2) f=d.slice(0,2)+'/'+d.slice(2);
+    if (el.value!==f) el.value=f;
+    var id=el.dataset.dob; S.a[id+'Txt']=f; S.a[id]='';
+    if (d.length===8){ var dd=+d.slice(0,2), mm=+d.slice(2,4), yy=+d.slice(4), dt=new Date(yy,mm-1,dd);
+      if (dt.getFullYear()===yy && dt.getMonth()===mm-1 && dt.getDate()===dd) S.a[id]=d.slice(4)+'-'+d.slice(2,4)+'-'+d.slice(0,2); }
+    save(); el.closest('.q').classList.remove('miss'); }; });
+  app.querySelectorAll('[data-one]').forEach(function(el){ el.onclick=function(){ var id=el.dataset.one; S.a[id]=el.dataset.v; el.parentNode.querySelectorAll('[data-one]').forEach(function(c){c.classList.toggle('on', c===el);}); el.closest('.q').classList.remove('miss'); changed(id); }; });
+  app.querySelectorAll('[data-multi]').forEach(function(el){ el.onclick=function(){ var id=el.dataset.multi, arr=(S.a[id]||[]).slice(), o=el.dataset.v, i=arr.indexOf(o);
+    if (i>-1) arr.splice(i,1); else { if (NADA.test(o) || /^Nenhum destes$/.test(o)) arr=[]; else arr=arr.filter(function(x){ return !(NADA.test(x) || /^Nenhum destes$/.test(x)); }); arr.push(o); }
+    S.a[id]=arr; el.parentNode.querySelectorAll('.chip').forEach(function(c){ c.classList.toggle('on', arr.indexOf(c.dataset.v)>-1); }); el.closest('.q').classList.remove('miss'); changed(id); }; });
+  app.querySelectorAll('[data-scale]').forEach(function(el){ el.onclick=function(){ S.a[el.dataset.scale]=+el.dataset.v; el.parentNode.querySelectorAll('.chip').forEach(function(c){c.classList.toggle('on', c===el);}); el.closest('.q').classList.remove('miss'); save(); }; });
+  app.querySelectorAll('.lik').forEach(function(row){ row.querySelectorAll('.chip').forEach(function(el){ el.onclick=function(){ S.a[row.dataset.id]=+el.dataset.v; row.querySelectorAll('.chip').forEach(function(c){c.classList.toggle('on', c===el);}); save(); }; }); });
+  app.querySelectorAll('[data-ck]').forEach(function(el){ el.onchange=function(){ S.a[el.dataset.ck]=el.checked; el.closest('.q').classList.remove('miss'); save(); }; });
+}
+
+function filled(v){ return !(v==null || v==='' || v===false || (Array.isArray(v) && !v.length)); }
+function valid(st){
+  var first=null;
+  app.querySelectorAll('.q.miss').forEach(function(e){ e.classList.remove('miss'); });
+  st.q.forEach(function(q){
+    if (!visible(q)) return;
+    var list = q.row ? q.q : [q];
+    list.forEach(function(x){
+      var bad = false;
+      if (x.lik) { bad = x.req && x.lik.some(function(l){ return !filled(S.a[l[0]]); }); }
+      else if (x.req) { bad = !filled(S.a[x.id]); }
+      if (!bad && x.type==='email' && S.a[x.id] && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(S.a[x.id])) bad = true;
+      if (!bad && x.type==='tel' && S.a[x.id] && String(S.a[x.id]).replace(/\D/g,'').length < 10) bad = true;
+      if (!bad && x.id==='nasc' && S.a.nasc && idade(S.a.nasc)==='') bad = true;
+      if (bad) { var el = x.lik ? app.querySelector('[data-lik]') : app.querySelector('[data-q="'+x.id+'"]'); if (el) { el.classList.add('miss'); if(!first) first=el; } }
+    });
+  });
+  return first;
+}
+
+bN.onclick = function(){
+  var ST = STEPS(), st = ST[S.step], bad = valid(st);
+  if (bad) { var e=document.getElementById('err'); e.style.display='block'; bad.scrollIntoView({behavior:'smooth',block:'center'}); return; }
+  if (S.step < ST.length-1) { S.step++; save(); render(); } else submit();
+};
+bB.onclick = function(){ S.step--; save(); render(); };
+
+/* =====================================================================
+   LEITURA PARA O MÉDICO
+   ===================================================================== */
+function scores(a){
+  var soma=0, n=0; IMPACTO.forEach(function(x){ if (typeof a[x[0]]==='number'){ soma+=a[x[0]]; n++; } });
+  var idx = n ? Math.round(soma/(IMPACTO.length*4)*100) : null;
+  var faixa = idx==null?'—': idx<=20?'leve': idx<=40?'moderado': idx<=60?'importante':'grave';
+  var phq = (a.phq1||0)+(a.phq2||0);
+  var imc = (a.peso && a.altura) ? Math.round(parseFloat(String(a.peso).replace(',','.'))/Math.pow(parseFloat(String(a.altura).replace(',','.'))/100,2)*10)/10 : null;
+  if (imc && (imc<10 || imc>90)) imc = null;
+  var bandeiras = (a.alerta||[]).filter(function(x){ return x!=='Nenhum destes'; });
+  return { impacto: idx, impactoFaixa: faixa, phq2: phq, phq2Pos: phq>=3, imc: imc, bandeiras: bandeiras };
+}
+function alerts(a, sc){
+  var L=[];
+  if (sc.bandeiras.length) L.push(['r','Sinais de alerta: '+sc.bandeiras.join('; '),'Priorizar contato e avaliar necessidade de atendimento imediato.']);
+  if (typeof a.dorPior==='number' && a.dorPior>=8) L.push(['r','Dor intensa (pior da semana '+a.dorPior+'/10)','Considerar antecipar a consulta.']);
+  if (sc.phq2Pos) L.push(['r','Rastreio de humor positivo (PHQ-2 = '+sc.phq2+'/6)','Dor crônica e humor se influenciam. Vale aprofundar na consulta (PHQ-9 completo).']);
+  if (a.anticoag==='Sim') L.push(['w','Usa anticoagulante / antiagregante','Relevante para infiltrações e procedimentos.']);
+  if (has(a.doencas,'Diabetes ou pré-diabetes')) L.push(['w','Diabetes ou pré-diabetes','Atenção a corticoide em infiltração.']);
+  if (has(a.doencas,'Câncer')) L.push(['w','Histórico de câncer','Investigar relação com a dor atual.']);
+  if (a.gest && a.gest!=='Não') L.push(['w','Gestação / amamentação: '+a.gest,'Atenção a medicações e exames de imagem.']);
+  if (has(a.tratou,'Remédio controlado para dor')) L.push(['w','Já usou remédio controlado para dor','Detalhar qual, dose e tempo de uso.']);
+  if (a.cirurgiaInd==='Sim, já me indicaram cirurgia') L.push(['i','Cirurgia já indicada por outro médico', a.cirurgiaQual||'Possível busca de segunda opinião ou alternativa.']);
+  if (sc.imc && sc.imc>=30) L.push(['i','IMC '+String(sc.imc).replace('.',',')+' (relatado)','Carga articular: avaliar conexão com nutrologia no Programa Blues.']);
+  if (typeof a.prontidao==='number' && a.prontidao<=4) L.push(['i','Baixa prontidão para iniciar tratamento ('+a.prontidao+'/10)','Alinhar expectativa antes de propor um programa longo.']);
+  if (a.decide && a.decide!=='Só eu') L.push(['i','Decisão compartilhada: '+a.decide, a.decidePresente ? 'Presente na consulta: '+a.decidePresente : '']);
+  return L;
+}
+function list(v){ return Array.isArray(v) ? v.join(', ') : (v==null?'':String(v)); }
+function buildSummary(){
+  var a=S.a, sc=scores(a), al=alerts(a,sc), id=idade(a.nasc);
+  var C={ink:'#0E1722',g:'#4A5160',m:'#8B8F99',b:'#967848',s:'#F6F1E8',l:'#E8E1D2'};
+  var row=function(k,v){ v=list(v); if(!v) return ''; return '<tr><td style="padding:6px 14px 6px 0;color:'+C.m+';vertical-align:top;width:38%;font-size:13px">'+esc(k)+'</td><td style="padding:6px 0;font-size:14px;color:'+C.ink+'">'+esc(v).replace(/\n/g,'<br>')+'</td></tr>'; };
+  var sec=function(t,rows){ if(!rows) return ''; return '<h3 style="font-family:Georgia,serif;color:'+C.b+';font-size:16px;margin:22px 0 6px;border-bottom:1px solid '+C.l+';padding-bottom:6px">'+t+'</h3><table style="width:100%;border-collapse:collapse">'+rows+'</table>'; };
+  var h='<div style="font-family:Arial,Helvetica,sans-serif;color:'+C.ink+';max-width:680px;margin:0 auto">';
+  h+='<div style="background:#0E1722;color:#fff;padding:18px 20px"><div style="color:#B89968;font-size:11px;letter-spacing:3px">PRÉ-CONSULTA · '+esc((CFG.doctorName||'').toUpperCase())+'</div>';
+  h+='<div style="font-family:Georgia,serif;font-size:22px;margin-top:6px">'+esc(a.nome)+(id!==''?' · '+id+' anos':'')+'</div>';
+  h+='<div style="color:#CFCAC4;font-size:13px;margin-top:3px">'+esc([a.sexo,a.cidade,a.modal].filter(Boolean).join(' · '))+'</div></div>';
+  var kp=function(n,l,d,c){ return '<td style="padding:10px;border:1px solid '+C.l+';text-align:center;width:25%"><div style="font-size:20px;font-weight:bold;color:'+(c||C.ink)+'">'+n+'</div><div style="font-size:11px;color:'+C.m+';text-transform:uppercase;letter-spacing:1px">'+l+'</div><div style="font-size:11px;color:'+C.g+'">'+d+'</div></td>'; };
+  h+='<table style="width:100%;border-collapse:collapse;margin-top:14px"><tr>'+
+     kp((typeof a.dorAgora==='number'?a.dorAgora:'—')+' / '+(typeof a.dorPior==='number'?a.dorPior:'—'),'Dor (EVA)','agora / pior da semana', a.dorPior>=8?'#A63A2B':C.ink)+
+     kp(sc.impacto==null?'—':sc.impacto,'Interferência',sc.impactoFaixa+' · 0 a 100', sc.impacto>60?'#A63A2B':sc.impacto>40?'#967848':C.ink)+
+     kp(sc.phq2+'/6','Humor (PHQ-2)',sc.phq2Pos?'rastreio positivo':'negativo', sc.phq2Pos?'#A63A2B':C.ink)+
+     kp((typeof a.prontidao==='number'?a.prontidao:'—')+'/10','Prontidão',esc(a.conducao||''))+'</tr></table>';
+  if (al.length){ h+='<div style="margin-top:14px">'; al.forEach(function(x){ var bg=x[0]==='r'?'#FBEFEC':x[0]==='w'?'#FBF3E6':'#F3F1EE', bar=x[0]==='r'?'#A63A2B':x[0]==='w'?'#C08A2E':'#8B8F99'; h+='<div style="background:'+bg+';border-left:4px solid '+bar+';padding:9px 12px;margin-bottom:6px;font-size:13.5px"><b>'+esc(x[1])+'</b>'+(x[2]?'<br><span style="color:'+C.g+'">'+esc(x[2])+'</span>':'')+'</div>'; }); h+='</div>'; }
+  h+='<div style="background:'+C.s+';border-left:4px solid '+C.b+';padding:12px 14px;margin-top:14px;font-size:14px;line-height:1.55"><b>Onde dói:</b> '+esc(list(a.locais))+(a.lado?' ('+esc(a.lado)+')':'')+' · '+esc(a.tempo||'')+'<br><b>Relato:</b> '+esc(a.queixa||'').replace(/\n/g,'<br>')+'<br><b>A dor impede:</b> '+esc(a.deixouDeFazer||'').replace(/\n/g,'<br>')+'<br><b>Daqui a 6 meses quer estar:</b> '+esc(a.seisMeses||'').replace(/\n/g,'<br>')+'</div>';
+  h+=sec('Identificação', row('Nome',a.nome)+row('Nascimento', a.nasc ? a.nasc.split('-').reverse().join('/')+(id!==''?' ('+id+' anos)':'') : '')+row('Sexo',a.sexo)+row('WhatsApp',a.whats)+row('E-mail',a.email)+row('Cidade',a.cidade)+row('Local de atendimento',a.modal)+row('Profissão',a.profissao)+row('Como chegou',a.origem)+row('Link de origem',a._origem));
+  h+=sec('A dor', row('Local',a.locais)+row('Lado',a.lado)+row('Relato',a.queixa)+row('Há quanto tempo',a.tempo)+row('Como começou',a.inicio)+row('Características',a.tipo)+row('Irradia',a.irradia)+row('Piora com',a.piora)+row('Alivia com',a.melhora));
+  var imp=IMPACTO.map(function(x){ return typeof a[x[0]]==='number' ? row(x[1], IMP_O[a[x[0]]]) : ''; }).join('');
+  h+=sec('Intensidade e interferência', row('Dor agora (0–10)',a.dorAgora)+row('Pior dor na semana (0–10)',a.dorPior)+imp+row('Pouco interesse ou prazer',PHQ_O[a.phq1])+row('Para baixo, sem perspectiva',PHQ_O[a.phq2])+row('Sinais de alerta',a.alerta));
+  h+=sec('Tratamentos e exames', row('Já fez',a.tratou)+row('Como foi',a.tratouComo)+row('Exames de imagem',a.exames)+row('Cirurgia indicada',a.cirurgiaInd)+row('Qual cirurgia',a.cirurgiaQual)+row('Espera da consulta',a.expect));
+  h+=sec('O que está em jogo', row('A dor impede de',a.deixouDeFazer)+row('Quem mais é afetado',a.afetados)+row('Em 6 meses quer estar',a.seisMeses)+row('Prontidão (0–10)',a.prontidao)+row('Condução preferida',a.conducao)+row('Decide com',a.decide)+row('Presente na consulta',a.decidePresente));
+  h+=sec('Saúde', row('Doenças',a.doencas)+row('Anticoagulante',a.anticoag)+row('Remédios em uso',a.remedios)+row('Alergias',a.alergias)+row('Peso / altura', [a.peso?a.peso+' kg':'',a.altura?a.altura+' cm':''].filter(Boolean).join(' · ')+(sc.imc?' · IMC '+String(sc.imc).replace('.',','):''))+row('Gestação / amamentação',a.gest)+row('Atividade física',a.ativ)+row('Tabagismo',a.fumo)+row('Observações',a.obs));
+  h+='<p style="color:'+C.m+';font-size:11px;margin-top:22px;line-height:1.5">Dor pela escala visual numérica (0–10). Interferência: 6 itens (0–4) inspirados no Inventário Breve de Dor (BPI), convertidos para 0–100 (0–20 leve · 21–40 moderado · 41–60 importante · 61–100 grave). PHQ-2: 2 primeiros itens do PHQ-9; ≥ 3 sugere aplicar o PHQ-9 completo. Formulário de triagem, sem valor diagnóstico. Consentimento LGPD registrado em '+new Date().toLocaleString('pt-BR')+'.</p></div>';
+
+  var L=function(k,v){ v=list(v); return v ? k+': '+v+'\n' : ''; };
+  var txt = '*PRÉ-CONSULTA · '+(CFG.doctorName||'')+'*\n'+(a.nome||'')+(id!==''?' · '+id+' anos':'')+(a.sexo?' · '+a.sexo:'')+'\n'+
+    L('WhatsApp',a.whats)+L('Cidade',a.cidade)+L('Atendimento',a.modal)+L('Profissão',a.profissao)+L('Como chegou',a.origem)+
+    (al.length?'\n⚠ *Pontos de atenção*\n'+al.map(function(x){ return '- '+x[1]; }).join('\n')+'\n':'')+
+    '\n*A dor*\n'+L('Onde',a.locais)+L('Lado',a.lado)+L('Há quanto tempo',a.tempo)+L('Início',a.inicio)+L('Tipo',a.tipo)+L('Irradia',a.irradia)+L('Piora',a.piora)+L('Alivia',a.melhora)+L('Relato',a.queixa)+
+    '\n*Intensidade*\nDor agora: '+a.dorAgora+'/10 · Pior na semana: '+a.dorPior+'/10\nInterferência: '+sc.impacto+'/100 ('+sc.impactoFaixa+') · PHQ-2: '+sc.phq2+'/6\n'+
+    '\n*Tratamentos*\n'+L('Já fez',a.tratou)+L('Como foi',a.tratouComo)+L('Exames',a.exames)+L('Cirurgia indicada',a.cirurgiaInd)+L('Qual',a.cirurgiaQual)+L('Espera',a.expect)+
+    '\n*Objetivo*\n'+L('A dor impede',a.deixouDeFazer)+L('Em 6 meses',a.seisMeses)+'Prontidão: '+a.prontidao+'/10\n'+L('Condução',a.conducao)+L('Decide',a.decide)+
+    '\n*Saúde*\n'+L('Doenças',a.doencas)+L('Anticoagulante',a.anticoag)+L('Remédios',a.remedios)+L('Alergias',a.alergias)+L('Peso/altura',[a.peso?a.peso+' kg':'',a.altura?a.altura+' cm':''].filter(Boolean).join(' · '))+L('Gestação',a.gest)+L('Atividade física',a.ativ)+L('Fuma',a.fumo)+L('Obs.',a.obs);
+  var subj = (sc.bandeiras.length?'[ALERTA] ':'') + (sc.phq2Pos?'[Atenção humor] ':'') + 'Pré-consulta · ' + (a.nome||'paciente') + (id!==''?' · '+id+' anos':'') + ' · ' + list(a.locais);
+  var row_ = { data:new Date().toLocaleString('pt-BR'), nome:a.nome, idade:id, tel:a.whats, email:a.email||'', cidade:a.cidade||'', origem:[a.origem,a._origem].filter(Boolean).join(' · '),
+    locais:list(a.locais), queixa:a.queixa||'', dorAgora:a.dorAgora, dorPior:a.dorPior, impacto:sc.impacto, phq2:sc.phq2, alerta:sc.bandeiras.join('; '), prontidao:a.prontidao, conducao:a.conducao||'', decide:a.decide||'' };
+  return { html:h, text:txt, subject:subj, row:row_ };
+}
+
+/* =====================================================================
+   ENVIO
+   ===================================================================== */
+var waLink = '';
+function submit(){
+  bN.disabled = true; bN.innerHTML = 'Enviando…';
+  var sum = buildSummary();
+  if (!CFG.endpointUrl) {
+    if (CFG.whatsappEnvio) {
+      waLink = 'https://wa.me/'+CFG.whatsappEnvio+'?text='+encodeURIComponent(sum.text);
+      var w = window.open(waLink, '_blank');
+      if (!w) location.href = waLink;
+    } else { try { console.log('MODO TESTE', sum); } catch(e){} }
+    finish(); return;
+  }
+  var payload = { key: CFG.writeKey, action:'ficha', teste: params.get('teste') === '1', subject: sum.subject, html: sum.html, text: sum.text, row: sum.row, patient:{ nome:S.a.nome } };
+  var ctl = ('AbortController' in window) ? new AbortController() : null, t = setTimeout(function(){ if (ctl) ctl.abort(); }, 25000);
+  fetch(CFG.endpointUrl, { method:'POST', mode:'no-cors', headers:{'Content-Type':'text/plain;charset=utf-8'}, body: JSON.stringify(payload), signal: ctl ? ctl.signal : undefined })
+    .then(function(){ clearTimeout(t); finish(); })
+    .catch(function(){ clearTimeout(t); bN.disabled=false; bN.innerHTML='Tentar de novo'; var e=document.getElementById('err'); e.textContent='Não conseguimos enviar agora. Confira a internet e toque em "Tentar de novo". Suas respostas continuam salvas.'; e.style.display='block'; });
+}
+function finish(){
+  var nome = (S.a.nome||'').split(' ')[0];
+  clear(); S = { step:-1, a:{} };
+  nav.style.display='none'; prog.style.width='100%';
+  document.getElementById('hSub').textContent = 'Pré-consulta concluída';
+  var viaWa = !CFG.endpointUrl && waLink;
+  var h = '<div class="anim"><div class="card done"><div class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>' +
+    '<div class="step-k">Tudo certo'+(nome?', '+esc(nome):'')+'</div>' +
+    (viaWa ? '<h2>Falta só <em>tocar em enviar</em> no WhatsApp</h2><p class="lead">O resumo das suas respostas abriu no WhatsApp da Clínica Blues. Toque em enviar para ele chegar à equipe do '+esc(CFG.doctorShort||'Dr. Rafael')+'.</p><a class="b1" style="display:block;text-decoration:none;margin-top:16px;padding:15px 18px;border-radius:13px" href="'+esc(waLink)+'" target="_blank" rel="noopener">Não abriu? Toque aqui <span class="arr">→</span></a>'
+           : '<h2>Suas respostas chegaram ao <em>'+esc(CFG.doctorShort||'Dr. Rafael')+'</em></h2><p class="lead">Obrigado pela confiança. Com isso, a sua consulta começa já sabendo da sua dor e de onde você quer chegar.</p>') +
+    '<div class="next"><div>Leve no dia os exames de imagem (raio-X, ressonância, ultrassom) e os laudos que tiver.</div><div>Traga a lista dos remédios que usa, inclusive os de dor.</div><div>Venha com roupa que facilite examinar a região que dói (ex.: bermuda para joelho e quadril).</div><div>Se alguém participa das suas decisões, convide essa pessoa para estar junto.</div></div>';
+  if (CFG.supportWhatsapp) h += '<p class="foot" style="margin-top:20px">Ficou alguma dúvida? <a href="https://wa.me/'+esc(CFG.supportWhatsapp)+'" target="_blank" rel="noopener">Fale com a clínica</a></p>';
+  app.innerHTML = h + '</div></div>';
+  window.scrollTo(0,0);
+}
+
+render();
+})();
+</script>
+</body>
+</html>
