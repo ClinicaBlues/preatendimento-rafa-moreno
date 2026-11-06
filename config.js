@@ -7,10 +7,11 @@
 
 window.PRE_CONFIG = {
 
-  // URL do robô (Google Apps Script) que recebe a ficha e manda o resumo
-  // por e-mail. Enquanto estiver vazio, a ficha é enviada pelo próprio
-  // paciente para o WhatsApp da clínica (whatsappEnvio), em texto.
-  endpointUrl: "",
+  // URL do robô (Google Apps Script "Pré-consulta Dr. Rafael Moreno", conta
+  // conradocgs@gmail.com) que recebe a ficha e manda o resumo por e-mail
+  // para rafaelmorenochaves01@gmail.com. Se ficar vazio, a ficha é enviada
+  // pelo próprio paciente para o WhatsApp da clínica (whatsappEnvio).
+  endpointUrl: "https://script.google.com/macros/s/AKfycbxnz-5sdeR8eBiU6CkLddFit2o4DV3ee6pxffbriJhzr522AscFwRefQIw-rzDijefP/exec",
 
   // Senha simples entre o site e o robô (igual à WRITE_KEY do Code.gs).
   writeKey: "rafael-pre-2026",
