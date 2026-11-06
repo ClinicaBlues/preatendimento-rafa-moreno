@@ -20,12 +20,12 @@ window.PRE_CONFIG = {
   doctorShort: "Dr. Rafael",
   crm: "CRM-MG 91439 · RQE 70774",
   tagline: "Ortopedia e Traumatologia · Tratamento da dor",
-  address: "Clínica Blues · R. Padre Marinho, 165 · Santa Efigênia · Belo Horizonte / MG",
-  online: "Atendimento em BH e, sob consulta, em Santa Luzia, Juiz de Fora e Itaúna",
+  address: "Consultório: R. Padre Marinho, 165 · Santa Efigênia · Belo Horizonte / MG",
+  online: "Também em Juiz de Fora, Itaúna e Santa Luzia, sob consulta",
 
   // Fotos (arquivos da pasta img/). Se não existirem, o site mostra as iniciais.
   photoRound: "img/perfil.jpg",
-  photoHero:  "img/hero.jpg",
+  photoHero:  "img/sobre.jpg",
 
   // WhatsApp da clínica (só dígitos: 55 + DDD + número)
   supportWhatsapp: "5531995979065",

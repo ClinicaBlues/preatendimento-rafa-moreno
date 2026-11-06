@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#0E1722">
 <meta name="robots" content="noindex,nofollow">
 <title>Pré-consulta · Dr. Rafael Moreno</title>
-<meta name="description" content="Pré-consulta online do Dr. Rafael Moreno, ortopedista e traumatologista da Clínica Blues.">
+<meta name="description" content="Pré-consulta online do Dr. Rafael Moreno, ortopedista e traumatologista em Belo Horizonte e cidades de Minas Gerais.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -115,13 +115,50 @@ button:disabled{opacity:.55}
 .foot a{color:var(--bronze-d)}
 .testmode{background:#FFF7E0;border:1px dashed #D9B44A;color:#7A5C00;font-size:12px;padding:8px 10px;border-radius:8px;margin-top:14px;text-align:center}
 @media (max-width:420px){.row3{grid-template-columns:1fr 1fr}.row3 .q:last-child{grid-column:span 2}}
+/* ---------- identidade do site rafaelmoreno ---------- */
+body{background:linear-gradient(180deg,#FFFDF8 0%,#FBF7EE 100%) fixed}
+header{background:rgba(255,253,248,.92);border-bottom:1px solid rgba(14,23,34,.06)}
+.hbar{max-width:720px;padding:14px 18px}
+.who b{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:22px;letter-spacing:.005em;color:var(--ink)}
+.who small{font-size:10px;letter-spacing:.3em;color:var(--mut);font-weight:500}
+.avatar{box-shadow:0 0 0 1px var(--tan);border:2px solid #FFFDF8}
+.progress{height:2px}
+.progress i{background:var(--tan)}
+main{max-width:720px}
+.step-k{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:.3em;font-weight:500;color:var(--bronze)}
+.step-k::before{content:"";width:32px;height:1px;background:var(--tan)}
+h1{font-weight:500;letter-spacing:-.01em;line-height:1.08}
+h1 em{display:block}
+h2{font-weight:500}
+h1 em,h2 em{color:var(--bronze);font-weight:500}
+.card{border-radius:0;border:1px solid var(--line2);border-left:3px solid var(--tan);box-shadow:0 4px 18px rgba(14,23,34,.06);padding:24px 22px}
+.chip{border-radius:0;border:1px solid var(--line);font-size:14px}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#F6F1E8}
+.scale .chip{border-radius:0}
+.big .opt{border-radius:0;border:1px solid var(--line)}
+.big .opt.on{background:#F6F1E8;box-shadow:inset 3px 0 0 var(--tan)}
+input[type=text],input[type=tel],input[type=email],input[type=date],input[type=number],textarea{border-radius:4px;border:1px solid var(--line)}
+.intro{border-radius:0;background:#F6F1E8;border-left:2px solid var(--tan)}
+nav{background:rgba(255,253,248,.97)}
+nav .in{max-width:720px}
+button{border-radius:0;font-weight:500;font-size:13px;letter-spacing:.16em;text-transform:uppercase;padding:17px 20px}
+.b1{background:var(--ink);color:#F6F1E8}
+.b1:hover{background:var(--bronze)}
+.b1 .arr{color:var(--tan)}
+.b2{border:1px solid var(--line)}
+.hero-img{height:380px;margin:0 -18px}
+.hero-img .badge{letter-spacing:.3em;font-weight:500;background:rgba(14,23,34,.78)}
+.fact i{background:transparent;border:1px solid var(--tan);color:var(--bronze);font-weight:600}
+.done .seal{border-radius:50%}
+.foot{letter-spacing:.02em}
+
 </style>
 </head>
 <body>
 <header>
   <div class="hbar">
     <div class="avatar" id="avatar">RM</div>
-    <div class="who"><b id="hName">Dr. Rafael Moreno</b><small id="hSub">Pré-consulta</small></div>
+    <div class="who"><b id="hName">Dr. Rafael Moreno</b><small id="hSub">Ortopedia &amp; Traumatologia</small></div>
     <div class="spacer"></div>
     <div class="saved" id="saved">Salvo neste aparelho</div>
   </div>
@@ -181,7 +218,7 @@ function STEPS(){ var a = S.a; return [
    {row:'2', q:[ {id:'nasc', t:'Data de nascimento', type:'dob', req:1, ph:'dd/mm/aaaa'}, {id:'sexo', t:'Sexo', type:'one', o:['Feminino','Masculino'], req:1} ]},
    {row:'2', q:[ {id:'whats', t:'WhatsApp', type:'tel', req:1, ph:'(31) 9 0000-0000', ac:'tel'}, {id:'email', t:'E-mail', type:'email', ac:'email'} ]},
    {id:'cidade', t:'Cidade onde mora', type:'text', ph:'Ex.: Belo Horizonte'},
-   {id:'modal', t:'Onde prefere ser atendido(a)?', type:'one', o:['Belo Horizonte (Clínica Blues)','Santa Luzia','Juiz de Fora','Itaúna',NAO_SEI]},
+   {id:'modal', t:'Onde prefere ser atendido(a)?', type:'one', o:['Belo Horizonte','Juiz de Fora','Itaúna','Santa Luzia','Outra cidade de MG',NAO_SEI]},
    {id:'profissao', t:'Profissão ou ocupação', type:'text', ph:'Ex.: Professora, motorista, aposentado…'},
    {id:'origem', t:'Como você chegou até o Dr. Rafael?', type:'one', o:['Instagram','Indicação de paciente','Indicação de médico ou profissional','Google','Site','Outro']}
  ]},
@@ -219,7 +256,7 @@ function STEPS(){ var a = S.a; return [
    {id:'conducao', t:'Depois da consulta, como você prefere ser conduzido(a)?', type:'big', req:1, o:[
      ['Uma avaliação e orientação','Quero entender o meu caso e sair com as orientações principais.'],
      ['Um tratamento direcionado','Quero tratar a dor com acompanhamento médico próximo, com procedimentos e reavaliações.'],
-     ['Um programa completo','Quero o tratamento médico junto com a equipe multidisciplinar da Clínica Blues (fisioterapia, nutrição e acompanhamento) para ter o melhor resultado.'],
+     ['Um programa completo','Quero o tratamento médico junto com uma equipe multidisciplinar (fisioterapia, nutrição e acompanhamento) para ter o melhor resultado.'],
      [NAO_SEI,'Prefiro ouvir o Dr. Rafael e decidir na consulta.'] ]},
    {id:'decide', t:'Quem decide sobre o seu tratamento junto com você?', type:'one', req:1, o:['Só eu','Eu e meu cônjuge','Eu e minha família','Outra pessoa']},
    {id:'decidePresente', show:function(){ return a.decide && a.decide!=='Só eu'; }, t:'Essa pessoa vai estar com você na consulta?', type:'one', o:['Sim','Não','Por vídeo ou telefone']}
@@ -264,7 +301,7 @@ function welcome(){
 }
 function foot(){
   var t = '<p class="foot">'+esc(CFG.doctorName||'')+(CFG.crm?' · '+esc(CFG.crm):'')+'<br>'+esc(CFG.address||'')+'<br>'+esc(CFG.online||'');
-  if (CFG.supportWhatsapp) t += '<br>Dúvidas? <a href="https://wa.me/'+esc(CFG.supportWhatsapp)+'" target="_blank" rel="noopener">Fale com a clínica</a>';
+  if (CFG.supportWhatsapp) t += '<br>Dúvidas? <a href="https://wa.me/'+esc(CFG.supportWhatsapp)+'" target="_blank" rel="noopener">Fale com a equipe</a>';
   t += '</p>';
   if (!CFG.endpointUrl && !CFG.whatsappEnvio) t += '<div class="testmode">Modo de teste: as respostas não são enviadas (falta a URL do robô em config.js).</div>';
   return t;
@@ -313,7 +350,7 @@ function qHtml(q){
   else if (q.type==='multi') h += '<div class="chips">'+q.o.map(function(o){ return '<span class="chip'+(has(v,o)?' on':'')+'" data-multi="'+q.id+'" data-v="'+esc(o)+'">'+esc(o)+'</span>'; }).join('')+'</div>';
   else if (q.type==='big') h += '<div class="big">'+q.o.map(function(o){ return '<div class="opt'+(v===o[0]?' on':'')+'" data-one="'+q.id+'" data-v="'+esc(o[0])+'"><b>'+esc(o[0])+'</b><span>'+esc(o[1])+'</span></div>'; }).join('')+'</div>';
   else if (q.type==='scale') { h += '<div class="scale">'; for (var i=0;i<=10;i++) h += '<span class="chip'+(v===i?' on':'')+'" data-scale="'+q.id+'" data-v="'+i+'">'+i+'</span>'; h += '</div><div class="scale-l"><span>'+esc(q.l[0])+'</span><span>'+esc(q.l[1])+'</span></div>'; }
-  else if (q.type==='consent') h += '<label class="consent"><input type="checkbox" data-ck="'+q.id+'"'+(v?' checked':'')+'><span>Autorizo o '+esc(CFG.doctorName||'médico')+' e a equipe da Clínica Blues a usar estas informações para o meu atendimento e a entrar em contato comigo.'+(CFG.endpointUrl?'':' Ao enviar, o resumo das respostas abre no meu WhatsApp para eu mandar à clínica.')+' Os dados ficam protegidos conforme a LGPD e posso pedir a exclusão a qualquer momento.'+(CFG.privacyUrl?' <a href="'+esc(CFG.privacyUrl)+'" target="_blank" rel="noopener">Política de privacidade</a>.':'')+' <span class="req">*</span></span></label>';
+  else if (q.type==='consent') h += '<label class="consent"><input type="checkbox" data-ck="'+q.id+'"'+(v?' checked':'')+'><span>Autorizo o '+esc(CFG.doctorName||'médico')+' e a equipe dele a usar estas informações para o meu atendimento e a entrar em contato comigo.'+(CFG.endpointUrl?'':' Ao enviar, o resumo das respostas abre no meu WhatsApp para eu mandar à equipe.')+' Os dados ficam protegidos conforme a LGPD e posso pedir a exclusão a qualquer momento.'+(CFG.privacyUrl?' <a href="'+esc(CFG.privacyUrl)+'" target="_blank" rel="noopener">Política de privacidade</a>.':'')+' <span class="req">*</span></span></label>';
   return h + '</div>';
 }
 
@@ -392,7 +429,7 @@ function alerts(a, sc){
   if (a.gest && a.gest!=='Não') L.push(['w','Gestação / amamentação: '+a.gest,'Atenção a medicações e exames de imagem.']);
   if (has(a.tratou,'Remédio controlado para dor')) L.push(['w','Já usou remédio controlado para dor','Detalhar qual, dose e tempo de uso.']);
   if (a.cirurgiaInd==='Sim, já me indicaram cirurgia') L.push(['i','Cirurgia já indicada por outro médico', a.cirurgiaQual||'Possível busca de segunda opinião ou alternativa.']);
-  if (sc.imc && sc.imc>=30) L.push(['i','IMC '+String(sc.imc).replace('.',',')+' (relatado)','Carga articular: avaliar conexão com nutrologia no Programa Blues.']);
+  if (sc.imc && sc.imc>=30) L.push(['i','IMC '+String(sc.imc).replace('.',',')+' (relatado)','Carga articular: avaliar conexão com nutrologia no programa de tratamento.']);
   if (typeof a.prontidao==='number' && a.prontidao<=4) L.push(['i','Baixa prontidão para iniciar tratamento ('+a.prontidao+'/10)','Alinhar expectativa antes de propor um programa longo.']);
   if (a.decide && a.decide!=='Só eu') L.push(['i','Decisão compartilhada: '+a.decide, a.decidePresente ? 'Presente na consulta: '+a.decidePresente : '']);
   return L;
@@ -468,10 +505,10 @@ function finish(){
   var viaWa = !CFG.endpointUrl && waLink;
   var h = '<div class="anim"><div class="card done"><div class="seal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>' +
     '<div class="step-k">Tudo certo'+(nome?', '+esc(nome):'')+'</div>' +
-    (viaWa ? '<h2>Falta só <em>tocar em enviar</em> no WhatsApp</h2><p class="lead">O resumo das suas respostas abriu no WhatsApp da Clínica Blues. Toque em enviar para ele chegar à equipe do '+esc(CFG.doctorShort||'Dr. Rafael')+'.</p><a class="b1" style="display:block;text-decoration:none;margin-top:16px;padding:15px 18px;border-radius:13px" href="'+esc(waLink)+'" target="_blank" rel="noopener">Não abriu? Toque aqui <span class="arr">→</span></a>'
+    (viaWa ? '<h2>Falta só <em>tocar em enviar</em> no WhatsApp</h2><p class="lead">O resumo das suas respostas abriu no WhatsApp da equipe. Toque em enviar para ele chegar à equipe do '+esc(CFG.doctorShort||'Dr. Rafael')+'.</p><a class="b1" style="display:block;text-decoration:none;margin-top:16px;padding:15px 18px;border-radius:13px" href="'+esc(waLink)+'" target="_blank" rel="noopener">Não abriu? Toque aqui <span class="arr">→</span></a>'
            : '<h2>Suas respostas chegaram ao <em>'+esc(CFG.doctorShort||'Dr. Rafael')+'</em></h2><p class="lead">Obrigado pela confiança. Com isso, a sua consulta começa já sabendo da sua dor e de onde você quer chegar.</p>') +
     '<div class="next"><div>Leve no dia os exames de imagem (raio-X, ressonância, ultrassom) e os laudos que tiver.</div><div>Traga a lista dos remédios que usa, inclusive os de dor.</div><div>Venha com roupa que facilite examinar a região que dói (ex.: bermuda para joelho e quadril).</div><div>Se alguém participa das suas decisões, convide essa pessoa para estar junto.</div></div>';
-  if (CFG.supportWhatsapp) h += '<p class="foot" style="margin-top:20px">Ficou alguma dúvida? <a href="https://wa.me/'+esc(CFG.supportWhatsapp)+'" target="_blank" rel="noopener">Fale com a clínica</a></p>';
+  if (CFG.supportWhatsapp) h += '<p class="foot" style="margin-top:20px">Ficou alguma dúvida? <a href="https://wa.me/'+esc(CFG.supportWhatsapp)+'" target="_blank" rel="noopener">Fale com a equipe</a></p>';
   app.innerHTML = h + '</div></div>';
   window.scrollTo(0,0);
 }
